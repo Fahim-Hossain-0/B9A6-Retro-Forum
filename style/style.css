@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  /* font-weight: <weight>; */
+}
+
+.mulish-font {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  /* font-weight: <weight>; */
+}
+.custom-color {
+  background: linear-gradient(
+    90deg,
+    #797dfc 0.63%,
+    rgba(121, 125, 252, 0) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Mulish;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 86px;
+}
+.btn-continer {
+  /* btn-continer w-[400px] h-[56px] max-w-full relative */
+  /* height: 56px; */
+  width: 450px;
+  max-width: 100%;
+  height: 56px;
+  position: absolute;
+}
+.btn-continer input {
+  /* bg-white rounded-[50px] py-4 px-8 border-2 border-white w-full */
+  width: 100%;
+  background-color: white;
+  border-radius: 50px;
+  padding: 18px 0px 18px 20px;
+  border: 2px solid white;
+}
+.btn-continer button {
+  /* text-white bg-[] h-full px-7 py-0 rounded-[50px] aspect-1 absolute right-0 */
+  color: white;
+  background-color: #797dfc;
+  height: 100%;
+  padding: 0px 40px 0px 40px;
+  border-radius: 50px;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}

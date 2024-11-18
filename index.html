@@ -1,74 +1,116 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" class="scroll-smooth focus:scroll-auto">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- font-kit -->
     <script src="https://kit.fontawesome.com/e2af3dae98.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
-<!-- menu -->
- <header class="container mx-auto mt-4">
-    <div class="flex justify-between navbar bg-base-100">
-        <div class="">
-          <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16" />
-              </svg>
+
+    <!-- menu -->
+    <header class="container mx-auto mt-4">
+        <div class="flex justify-between navbar bg-base-100">
+            <div class="">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a>Item 1</a></li>
+                        <li>
+                            <a>Parent</a>
+                            <ul class="p-2">
+                                <li><a>Submenu 1</a></li>
+                                <li><a>Submenu 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Item 3</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-xl"><img src="images/logo.png" alt=""></a>
             </div>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-              <li><a>Item 1</a></li>
-              <li>
-                <a>Parent</a>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </li>
-              <li><a>Item 3</a></li>
-            </ul>
-          </div>
-          <a class="btn btn-ghost text-xl"><img src="images/logo.png" alt=""></a>
+            <div>
+                <div class=" hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li class="tooltip" data-tip="home"><a><i class="fa-solid fa-house-chimney text-lg"></i></a>
+                        </li>
+                        <li class="tooltip" data-tip="edit"><a><i class="fa-solid fa-pen-fancy text-lg"></i></a></li>
+                        <li class="tooltip" data-tip="user"><a><i class="fa-solid fa-user-plus text-lg"></i></a></li>
+                        <li class="tooltip" data-tip="contact"><a><i class="fa-solid fa-flag text-lg"></i></a></li>
+                    </ul>
+                </div>
+                <div class="ml-2">
+                    <a
+                        class="btn bg-[#797DFC] rounded-full px-8 text-white hover:bg-[#e1e2ea] hover:text-[#797DFC] border-none leading-4 mulish-font font-bold">Sign
+                        In</a>
+                </div>
+            </div>
         </div>
-        <div>
-            <div class=" hidden lg:flex">
-                <ul class="menu menu-horizontal px-1">
-                  <li class="tooltip" data-tip="home"><a><i class="fa-solid fa-house-chimney text-lg"></i></a></li>
-                  <li class="tooltip" data-tip="edit"><a><i class="fa-solid fa-pen-fancy text-lg"></i></a></li>
-                  <li class="tooltip" data-tip="user"><a><i class="fa-solid fa-user-plus text-lg"></i></a></li>
-                  <li class="tooltip" data-tip="contact"><a><i class="fa-solid fa-flag text-lg"></i></a></li>
-                </ul>
-              </div>
-              <div class="ml-2">
-                <a class="btn bg-[#797DFC] rounded-full px-8 text-white hover:bg-[#e1e2ea] hover:text-[#797DFC] border-none leading-4">Sign In</a>
-              </div>
+    </header>
+    <!-- menu -->
+    <!-- main  -->
+    <main class="container mx-auto mt-20">
+        <div class="bg-no-repeat bg-center bg-current rounded-3xl h-[550px]"
+            style="background-image: url(images/Group\ 9.svg);">
+            <div class="flex flex-col md:flex-row justify-around items-center">
+                <div class="flex justify-center items-center">
+                    <div class="">
+                        <h1 class="mulish-font font-black text-[64px] text-white leading-[86p]">Welcome to the <br> <span
+                                class="custom-color">ReTro</span> Forum</h1>
+                        <p class="text-[#FFFFFFCC] mulish-font font-medium tex-[20px] leading-9 ">Share your favorite
+                            opinion and win and wp <br> forum coffee mug!</p>
+                        <div>
+                            <div class="btn-continer mt-8">
+                                <input class="" type="text" placeholder="Search here anything">
+                                <button class="btn text-[20px]">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center mt-20 mulish-font">
+                    <div class="flex flex-col justify-center items-center bg-white h-[288px] p-12 gap-y-6 rounded-[32px] text-[24px]">
+                        <div class="flex justify-center items-center gap-14">
+                            <p>Registered Users</p>
+                            <p>01</p>
+                        </div>
+                        <div class="flex justify-center items-center gap-14">
+                            <p>Registered Users</p>
+                            <p>01</p>
+                        </div>
+                        <div class="flex justify-center items-center gap-14">
+                            <p>Registered Users</p>
+                            <p>01</p>
+                        </div>
+                        <div class="flex justify-center items-center gap-14">
+                            <p>Registered Users</p>
+                            <p>01</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
-      </div>
- </header>
-<!-- menu -->
+    </main>
+    <!-- main  -->
 
 
+    <script src="script/main.js"></script>
 
 
-<script src="script/main.js"></script>
 </body>
 
 </html>
