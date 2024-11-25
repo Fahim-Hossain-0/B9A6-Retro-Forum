@@ -57,8 +57,8 @@ const email = (postIndex) => {
     const post = globalUpdates[postIndex]
     // console.log(data);
     const titleUpdateDiv = document.createElement("div");
-    titleUpdateDiv.innerHTML = `<div class="flex items-center justify-between gap-16  p-6 my-3 rounded-2xl bg-[#12132D0D]">
-                                <p class="text-[#12132D] mulish-font">${post.title}</p>
+    titleUpdateDiv.innerHTML = `<div class="w-full flex items-center justify-between gap-12 p-6 my-3 rounded-2xl bg-[#12132D0D]">
+                                <p class="text-[#12132D] mulish-font w-3/5">${post.title}</p>
                                 <p class="text-[#12132D99] inter-font"><img class="inline" src="images/tabler-icon-eye.svg"
                                         alt="">${post.view_count}</p>
                             </div>`;
