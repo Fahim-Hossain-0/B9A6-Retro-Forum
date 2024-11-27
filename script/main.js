@@ -1,18 +1,15 @@
-let globalUpdates = []; // Global variable to store updates
+let globalUpdates = [];
 
 const loadPost = async () => {
   const res = await fetch("https://openapi.programming-hero.com/api/retro-forum/posts");
   const data = await res.json();
-  globalUpdates = data.posts; // Store the posts globally
+  globalUpdates = data.posts;
   allPost(data.posts);
 };
-
 loadPost();
-
 const allPost = posts => {
   const allPostContainer = document.getElementById("all-post");
-  posts.forEach((post,index) => {
-    // console.log(post);
+  posts.forEach((post, index) => {
     const showPostDiv = document.createElement("div");
     showPostDiv.innerHTML = `
       <div class="mb-6 flex justify-center gap-5 bg-[#797DFC1A] border border-[#797DFC] rounded-3xl p-10">
@@ -35,12 +32,11 @@ const allPost = posts => {
             <div class="flex items-center justify-start mt-6">
               <p class="inline-flex"><img class="mr-[12px]" src="images/Vector.svg" alt="">${post.comment_count}</p>
               <p class="inline-flex px-6"><img class="mr-[8px]" src="images/tabler-icon-eye.svg" alt="">${post.view_count}</p>
-              <p class="inline-flex"><img class="mr-[8px]" src="images/tabler-icon-clock-hour-9.svg" alt="">${
-                post.posted_time
-              }</p>
+              <p class="inline-flex"><img class="mr-[8px]" src="images/tabler-icon-clock-hour-9.svg" alt="">${post.posted_time
+      }</p>
             </div>
             <div class="mt-4">
-              <button onclick="email(${index})"><img src="images/email 1.svg" alt=""></button>
+              <button id='email-button' onclick="email(${index})"><img src="images/email 1.svg" alt=""></button>
             </div>
           </div>
         </div>
@@ -48,20 +44,25 @@ const allPost = posts => {
     allPostContainer.appendChild(showPostDiv);
   });
 };
-
+let count = 0;
 const email = (postIndex) => {
-  //   console.log("Email button clicked. Processing global updates:");
-  //   console.log(globalUpdates);
+  count = 1
+  const markAsRead = document.getElementById('mark-as-read');
+
+  let readCount = parseInt(markAsRead.innerText) || 0;
+
+  readCount += count;
+
+  markAsRead.innerText = readCount;
+
   const titleUpdate = document.getElementById("title-update");
-//   titleUpdate.innerHTML= ''
-    const post = globalUpdates[postIndex]
-    // console.log(data);
-    const titleUpdateDiv = document.createElement("div");
-    titleUpdateDiv.innerHTML = `<div class="w-full flex items-center justify-between gap-12 p-6 my-3 rounded-2xl bg-[#12132D0D]">
+  const post = globalUpdates[postIndex]
+  const titleUpdateDiv = document.createElement("div");
+  titleUpdateDiv.innerHTML = `<div class="w-full flex items-center justify-between gap-12 p-6 my-3 rounded-2xl bg-[#12132D0D]">
                                 <p class="text-[#12132D] mulish-font w-3/5">${post.title}</p>
                                 <p class="text-[#12132D99] inter-font"><img class="inline" src="images/tabler-icon-eye.svg"
                                         alt="">${post.view_count}</p>
                             </div>`;
-    titleUpdate.appendChild(titleUpdateDiv);
-  
+  titleUpdate.appendChild(titleUpdateDiv);
+
 };

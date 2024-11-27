@@ -1,33 +1,28 @@
-<div class="flex justify-center gap-5 bg-[#797DFC1A] border border-[#797DFC] rounded-3xl p-10">
-                    <div>
-                        <div class="badge bg-[#10B981] badge-xs"></div>
-                    </div>
-                    <div>
-                        <div class="flex items-center gap-5 inter-font font-medium text-sm text-[#12132DCC]">
-                            <span># Music</span>
-                            <span>Author : Awlad Hossain</span>
-                        </div>
-                        <p class="text-[20px] font-bold mulish-font text-[#12132D] mt-3">
-                            10 Kids Unaware of Their Halloween Costume
-                        </p>
-                        <p class="text-base font-normal leading-[26px] inter-font text-[#12132D99] mt-4">
-                            It’s one thing to subject yourself to ha Halloween costume
-                            mishap because, <br />
-                            hey that’s your prerogative
-                        </p>
-                        <hr class="bored-[#12132D40] border-dashed w-[596px] h-[1.9px] mt-5" />
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center justify-start mt-6">
-                                <p class="inline-flex"><img class="mr-[12px]" src="images/Vector.svg" alt="">000
-                                </p>
-                                <p class="inline-flex px-6"><img class="mr-[12px]" src="images/tabler-icon-eye.svg" alt="">000
-                                </p>
-                                <p class="inline-flex"><img class="mr-[12px]" src="images/tabler-icon-clock-hour-9.svg" alt="">000
-                                </p>
-                            </div>
-                               <div class="mt-4">
-                                <img class="" src="images/email 1.svg" alt="">
-                            </div>
+<!-- 2nd-banner-section -->
+        <section class="flex justify-center items-center mt-24">
+            <div class="">
+                <div class="hero bg-[#12132D] rounded-[32px] h-[400px] w-[1170px]">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <img src="images/joinforum.png" class="max-w-sm rounded-lg shadow-2xl" />
+                        <div>
+                            <h1 class="text-[40px] text-white font-black mulish-font">Join Our Forum</h1>
+                            <p class="mulish-font text-[18px] font-medium leading-7 text-[#FFFFFFCC] mt-4 mb-8">
+                                Share your favorite opinion and win and wp forum coffee mug! Yes, you can <br> run unit
+                                tests and view the results directly within the app.
+                            </p>
+                            <button
+                                class="bg-[#797DFC] text-white text-[20px] mulish-font font-bold text-center py-[18px] px-[40px] rounded-[50px]">Registered
+                                Now</button>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- letest-post -->
+        <div class="text-center mt-24 ">
+            <h2 class="mulish-font text-[40px] font-black">Latest Posts</h2>
+            <p class="text-lg font-normal inter-font text-[#12132D99] leading-[30px]">Yes, you can run unit tests and
+                view the results directly within the app. The <br> integrated testing features allow for a streamlined .
+            </p>
+        </div>
