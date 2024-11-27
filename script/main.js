@@ -12,7 +12,7 @@ const allPost = posts => {
   posts.forEach((post, index) => {
     const showPostDiv = document.createElement("div");
     showPostDiv.innerHTML = `
-      <div class="mb-6 flex justify-center gap-5 bg-[#797DFC1A] border border-[#797DFC] rounded-3xl p-10">
+      <div class="mb-6 flex justify-center gap-5 bg-[#F3F3F5] border border-[#797DFC] rounded-3xl p-10">
         <div>
           <div class="badge bg-[#10B981] badge-xs"></div>
         </div>
