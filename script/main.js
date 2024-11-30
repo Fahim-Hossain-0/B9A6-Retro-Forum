@@ -26,7 +26,7 @@ const allLatestPost = data =>{
                             <img class="w-[44px] h-[44px] rounded-[44px]" src="${post.profile_image}" alt="">
                             <div class="ml-4">
                                 <p class="font-bold text-[16px] mulish-font">${post.author.name}</p>
-                                <p class="text-[14px] mulish-font text-[#12132D99]">${post?.author?.designation? post.author.designation:'Not available'}</p>
+                                <p class="text-[14px] mulish-font text-[#12132D99]">${post?.author?.designation? post.author.designation:'unknown'}</p>
                             </div>
                         </div>
                     </div>`

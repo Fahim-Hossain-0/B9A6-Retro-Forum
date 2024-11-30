@@ -2,7 +2,7 @@ let globalUpdates = [];
 const loadPost = async () => {
   const res = await fetch("https://openapi.programming-hero.com/api/retro-forum/posts");
   const data = await res.json();
-  // console.log(data)
+  console.log(data)
   globalUpdates = data.posts;
   allPost(data.posts);
 };
@@ -14,11 +14,16 @@ const allPost = posts => {
     showPostDiv.innerHTML = `
       <div class="mb-6 flex justify-center gap-5 bg-[#F3F3F5] border border-[#797DFC] rounded-3xl p-10">
         <div>
-          <div class="badge bg-[#10B981] badge-xs"></div>
+          <img class="inline w-[72px] h-[50px] rounded-2xl " src="${post.image}" alt="">
+          <div class="relative">
+         <div class="absolute left-[40px] bottom-[40px] badge badge-xs ${
+              post.isActive ? "bg-[#10B981]" : "bg-[#EF4444]"
+            }"> </div>
+    </div>
         </div>
         <div>
           <div class="flex items-center gap-5 inter-font font-medium text-sm text-[#12132DCC]">
-            <span># Music</span>
+            <span># ${post.category}</span>
             <span>Author : ${post.author.name}</span>
           </div>
           <p class="text-[20px] font-bold mulish-font text-[#12132D] mt-3">
