@@ -1,10 +1,15 @@
 let globalUpdates = [];
 const loadPost = async () => {
+ 
   const res = await fetch("https://openapi.programming-hero.com/api/retro-forum/posts");
+
   const data = await res.json();
-  console.log(data)
+  // console.log(data)
   globalUpdates = data.posts;
+  
   allPost(data.posts);
+
+
 };
 loadPost();
 const allPost = posts => {
@@ -47,6 +52,7 @@ const allPost = posts => {
       </div>`;
     allPostContainer.appendChild(showPostDiv);
   });
+
 };
 let count = 0;
 const email = (postIndex) => {
@@ -69,4 +75,19 @@ const email = (postIndex) => {
                             </div>`;
   titleUpdate.appendChild(titleUpdateDiv);
 
+
 };
+
+
+// const toggleLoadingInfinity = (isLoading) => {
+//   const loadingInfinity = document.getElementById('loading-infinity');
+//   console.log(loadingInfinity)
+//   loadingInfinity.classList.add('hidden')
+
+//   // if (isLoading) {
+//   //   loadingInfinity.classList.remove('hidden'); // Show spinner
+//   // } else {
+//   //   loadingInfinity.classList.add('hidden'); // Hide spinner
+//   // }
+// };
+

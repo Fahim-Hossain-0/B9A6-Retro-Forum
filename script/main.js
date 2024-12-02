@@ -8,7 +8,7 @@ const allLatestPost = data =>{
     // console.log(data)
     const letestPostCard = document.getElementById('letest-post-card')
     data.forEach(post => {
-        console.log(post)
+        // console.log(post)
         const postCard = document.createElement('div')
         postCard.classList = `card bg-base-100 w-96 shadow-xl border-[#12132D26] border-[1px]`
         postCard.innerHTML =`<figure>
